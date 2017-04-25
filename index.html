@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style>
+			#tbl {
+				width: 40%;
+				border-collapse: collapse;
+				text-align: center;
+			}
+        </style>
+    </head>
+    <body>
+    <form id="form1">
+	    <div>
+	        <table id="tbl" border="1">
+	            <tr>
+	                <td> 11</td>
+	                <td> 12</td>
+	                <td> 13</td>
+	            </tr>
+	           <tr>
+	                <td> 21</td>
+	                <td> 22</td>
+	                <td> 23</td>
+	            </tr>
+	            <tr>
+	                <td> 31</td>
+	                <td> 32</td>
+	                <td> 33</td>
+	            </tr>
+	        </table>
+	    </div>
+    </form>
+    <script>
+    	function load(){
+	     var tab=document.getElementById("tbl");
+	     var rows=tab.rows;
+	     console.log(rows.length);//表格的行数
+
+	     for(var i=0;i<rows.length;i++){ //遍历表格的行
+	        for(var j=0;j<rows[i].cells.length;j++){  //遍历每行的列
+	        console.log("第"+(i+1)+"行，第"+(j+1)+"列的值是:"+rows[i].cells[j].innerHTML);
+	        }
+	     }
+	   }
+	   load();
+
+    </script>
+    </body>
+<ml>
